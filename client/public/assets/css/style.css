@@ -1,0 +1,56 @@
+.wrap {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.wrap-center {
+	flex: 1;
+	 padding: 2rem 0;
+}
+.navbar-logo {
+	display: inline-block;
+	width: 120px;
+}
+
+.navbar-logo img {
+	width: 100%;
+}
+
+.logout {
+	cursor: pointer;
+}
+
+.table-row {
+	cursor: pointer;
+}
+
+.table-row:hover {
+	background-color: #f9fafb;
+}
+
+.footer {
+	padding: 1rem 0;
+	background: #f8f9fa;
+}
+
+.inline-error {
+	color: #ae5856;
+	margin: 0 1rem;
+}
+
+.home-page-title {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.spinner {
+    text-align:center;
+    margin: 1rem 0;
+}
+
+.create {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
