@@ -25,7 +25,6 @@ class Dashboard extends Component {
 
     return (
       <div className="ui container">
-        {console.log("products", products)}
         <div className="text-center create">
           <NavLink to="/create-product">Create product</NavLink>
         </div>

@@ -13,7 +13,6 @@ class Product extends Component {
   }
 
   render () {
-    console.log("this.props.product", this.props.product);
     const {loading, product} = this.props;
 
     if(loading) {

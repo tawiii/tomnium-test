@@ -34,7 +34,6 @@ export const getProduct = (id) => dispatch => {
   })
   axios.get(`/api/product/${id}`)
   .then(({data}) => {
-    console.log("data", data);
     dispatch({
       type: C.GET_PRODUCT + C.FINISH_LOAD,
       payload: data
