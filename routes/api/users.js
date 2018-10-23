@@ -23,12 +23,7 @@ router.post('/register', (req,res) => {
       errors.name =  "Name already exists"
       return res.status(400)
       .json(errors)
-    } else{
-      const avatar = gravatar.url(req.body.name, {
-        s: '200',
-        r: 'pg',
-        default: 'mm'
-      })
+    } else {
       const newUser = new User({
         name: req.body.name,
         password: req.body.password

@@ -1,6 +1,5 @@
 import React  from 'react';
-import PropTypes from 'prop-types';
-import {Icon, Segment} from 'semantic-ui-react'
+import {Icon, Segment} from 'semantic-ui-react';
 
 const Spinner = ({size}) => (
   <Segment basic textAlign="center">
@@ -8,12 +7,9 @@ const Spinner = ({size}) => (
   </Segment>
 )
 
-Spinner.propTypes = {
-  size: PropTypes.string.isRequired,
-};
 Spinner.defaultProps = {
   size: 'huge'
-}
+};
 
 
 

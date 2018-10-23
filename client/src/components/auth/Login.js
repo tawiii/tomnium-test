@@ -27,10 +27,12 @@ class Login extends Component {
 		}
 	}
 
-	handleChange = ({target}) => this.setState({
-		data: {...this.state.data, [target.name]: target.value},
-		errors: {...this.state.errors, [target.name]: ''}
-	})
+	handleChange = ({target}) => {
+		this.setState({
+			data: {...this.state.data, [target.name]: target.value},
+			errors: {...this.state.errors, [target.name]: ''}
+		});
+	}
 
 	validate = (data) => {
 		const errors = {}
@@ -42,7 +44,6 @@ class Login extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		this.props.userLogin(this.state.data)
-
 	}
 
 	render(){
@@ -55,7 +56,7 @@ class Login extends Component {
 						<h2 className="text-center">Login</h2>
 						<Form onSubmit={this.handleSubmit}>
 							<Form.Field error={!!errors.name}>
-								<label>Name {errors.name && <InlineError  text={errors.name}/>}</label>
+								<label>Name {errors.name && <InlineError text={errors.name}/>}</label>
 								<input type="text" name="name"
 									value={data.name}
 									onChange={this.handleChange}
@@ -63,7 +64,7 @@ class Login extends Component {
 							</Form.Field>
 
 							<Form.Field error={!!errors.password}>
-								<label>Password {errors.password && <InlineError  text={errors.password}/>}</label>
+								<label>Password {errors.password && <InlineError text={errors.password}/>}</label>
 								<input type="text" name="password"
 									value={data.password}
 									onChange={this.handleChange}
@@ -73,8 +74,7 @@ class Login extends Component {
 							<Form.Field>
 								<Button loading={loading}
 									disabled={loading}
-									primary>Login
-								</Button>
+									primary>Login</Button>
 							</Form.Field>
 
 						</Form>

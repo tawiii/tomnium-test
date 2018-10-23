@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {Grid, Form, Button} from 'semantic-ui-react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
@@ -82,13 +81,6 @@ class Register extends Component {
     );
   }
 }
-
-Register.propTypes = {
-  isAuth: PropTypes.bool.isRequired,
-  loading: PropTypes.bool.isRequired,
-  errors: PropTypes.object.isRequired,
-  userRegister: PropTypes.func.isRequired,
-};
 
 export default connect(
   ({auth, errors}) => ({
